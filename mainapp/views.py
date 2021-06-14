@@ -21,13 +21,9 @@ class BroadCastIdViewSet(generics.ListCreateAPIView):
 
 	def create(self, request, *args, **kwargs):
 		request_data = request.data
-		username = request_data['username']
-		broadcast_id = request_data['broadcast_id']
 		access_code = request_data['access_code']
 
 		print("Request data is {}".format(request_data))
-		print("Username is {}".format(username))
-		print("Broadcast id is {}".format(broadcast_id))
 		print("Access code is {}".format(access_code))
 
 		# You could call your functions that authenticates and sends the username, and broadcast id to Sehaj over here
